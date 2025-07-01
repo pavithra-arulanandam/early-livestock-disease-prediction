@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livestock Disease Forecasting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Livestock Disease Forecasting</h1>
+            <p>Smart Disease Detection For Livestock Animals</p>
+        </div>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <i class="fas fa-heartbeat hero-icon"></i>
+                <h2>Uncover Livestock Diseases with AI-Driven Insights</h2>
+                <p>Early detection system for common livestock health issues</p>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-stethoscope feature-icon"></i>
+                <h3>Symptom Analysis</h3>
+                <p>Advanced analysis of multiple symptoms for accurate predictions</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Pre-Consultation Phase</h3>
+                <p>Symptoms are observed and assessed before seeking medical advice or intervention</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Enter basic animal information</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Describe observed symptoms</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Get instant AI-powered diagnosis</p>
+                </div>
+            </div>
+            
+            <a href="/predict" class="btn">
+                <i class="fas fa-play-circle"></i> Get Started Now
+            </a>
+        </div>
+
+        <div class="disclaimer">
+            <p><i class="fas fa-info-circle"></i> Note: Always consult a veterinarian for professional diagnosis</p>
+        </div>
+    </div>
+</body>
+</html>
