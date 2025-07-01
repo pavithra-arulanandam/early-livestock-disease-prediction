@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Animal Disease Diagnosis</h1>
+            <p>Enter details about your livestock</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="/result" method="POST">
+                <div class="form-group">
+                    <label for="animal_type"><i class="fas fa-paw"></i> Animal Type</label>
+                    <select class="form-control" id="animal_type" name="animal_type" required>
+                        <option value="" disabled selected>Select Animal Type</option>
+                        <option value="Cow">Cow</option>
+                        <option value="Buffalo">Buffalo</option>
+                        <option value="Sheep">Sheep</option>
+                        <option value="Goat">Goat</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age"><i class="fas fa-calendar-alt"></i> Age </label>
+                    <input type="number" class="form-control" id="age" name="age" min="1" placeholder="e.g., 2, 6" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="temperature"><i class="fas fa-thermometer-half"></i> Temperature (°F)</label>
+                    <input type="number" step="0.1" class="form-control" id="temperature" name="temperature" placeholder="e.g., 105, 102.4" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sym1"><i class="fas fa-stethoscope"></i> Primary Symptom</label>
+                    <input type="text" class="form-control" id="sym1" name="sym1" placeholder="e.g., difficulty walking, shortness of breath" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sym2"><i class="fas fa-stethoscope"></i> Secondary Symptom (optional)</label>
+                    <input type="text" class="form-control" id="sym2" name="sym2" placeholder="e.g., Loss of appetite, painless lumps ">
+                </div>
+                
+                <div class="form-group">
+                    <label for="sym3"><i class="fas fa-stethoscope"></i> Additional Symptom (optional)</label>
+                    <input type="text" class="form-control" id="sym3" name="sym3" placeholder="e.g., sweats, chills">
+                </div>
+                
+                <div class="btn-container">
+                    <a href="/" class="btn" style="background-color: #6c757d;">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </a>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-diagnoses"></i> Predict
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
